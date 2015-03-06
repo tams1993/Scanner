@@ -2,25 +2,24 @@ package com.example.tams1993.scanner.generator;
 
 
 
-        import com.example.tams1993.scanner.R;
-        import com.google.zxing.BarcodeFormat;
-        import com.google.zxing.WriterException;
-
-
         import android.app.Activity;
-        import android.content.Context;
-        import android.content.SharedPreferences;
-        import android.graphics.Bitmap;
-        import android.graphics.Point;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.view.Display;
-        import android.view.View;
-        import android.view.View.OnClickListener;
-        import android.view.WindowManager;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.ImageView;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Point;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Display;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+import com.example.tams1993.scanner.R;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
 
 public class GenerateQRCodeActivity extends Activity implements OnClickListener{
 
@@ -59,6 +58,8 @@ public class GenerateQRCodeActivity extends Activity implements OnClickListener{
                 int height = point.y;
                 int smallerDimension = width < height ? width : height;
                 smallerDimension = smallerDimension * 3/4;
+
+
 
                 //Encode with a QR Code image
                 QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
