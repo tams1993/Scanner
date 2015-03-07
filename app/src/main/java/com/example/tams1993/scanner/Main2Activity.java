@@ -8,8 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.tams1993.scanner.Scanner.ScannerActivity;
 import com.example.tams1993.scanner.generator.GenerateQRCodeActivity;
+import com.google.zxing.client.android.CaptureActivity;
 
 
 public class Main2Activity extends Activity {
@@ -44,7 +44,7 @@ public class Main2Activity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Main2Activity.this, ScannerActivity.class);
+                Intent intent = new Intent(Main2Activity.this, CaptureActivity.class);
                 startActivity(intent);
 
 

@@ -32,6 +32,10 @@
             android:name=".Scanner.ExamPage"
             android:label="@string/title_activity_ecam_page" >
         </activity>
+
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
