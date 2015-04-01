@@ -33,6 +33,15 @@ public class GenerateQRCodeActivity extends Activity implements OnClickListener{
     private Runnable refresh;
 
     @Override
+    protected void onPause() {
+        super.onPause();
+
+
+        handler.removeCallbacks(refresh);
+
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generator);
@@ -72,6 +81,7 @@ public class GenerateQRCodeActivity extends Activity implements OnClickListener{
 
 
         handler.post(refresh);
+
 
 
 

@@ -8,8 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+
+import com.dd.CircularProgressButton;
 import com.example.tams1993.scanner.generator.GenerateQRCodeActivity;
 import com.google.zxing.client.android.CaptureActivity;
+
 
 
 public class Main2Activity extends Activity {
@@ -17,14 +20,30 @@ public class Main2Activity extends Activity {
 
     private Button btnScanner, btnGenerator;
 
+    private CircularProgressButton circularProgressButton;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
 
+
+
         btnGenerator = (Button) findViewById(R.id.btnGenerator);
         btnScanner = (Button) findViewById(R.id.btnScanner);
+        circularProgressButton = (CircularProgressButton) findViewById(R.id.btnWithText);
+
+        circularProgressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                circularProgressButton.setProgress(99);
+                circularProgressButton.setIndeterminateProgressMode(true);
+            }
+        });
 
 
         btnGenerator.setOnClickListener(new View.OnClickListener() {
